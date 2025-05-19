@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora com Histórico Local</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <input type="text" id="visor" disabled>
+        <div class="botoes">
+            <button onclick="limparVisor()">C</button>
+            <button onclick="apagarUltimo()">DEL</button>
+            <button onclick="adicionarAoVisor('/')">/</button>
+            <button onclick="adicionarAoVisor('*')">*</button>
+
+            <button onclick="adicionarAoVisor('7')">7</button>
+            <button onclick="adicionarAoVisor('8')">8</button>
+            <button onclick="adicionarAoVisor('9')">9</button>
+            <button onclick="adicionarAoVisor('-')">-</button>
+
+            <button onclick="adicionarAoVisor('4')">4</button>
+            <button onclick="adicionarAoVisor('5')">5</button>
+            <button onclick="adicionarAoVisor('6')">6</button>
+            <button onclick="adicionarAoVisor('+')">+</button>
+
+            <button onclick="adicionarAoVisor('1')">1</button>
+            <button onclick="adicionarAoVisor('2')">2</button>
+            <button onclick="adicionarAoVisor('3')">3</button>
+            <button onclick="calcular()">=</button>
+
+            <button onclick="adicionarAoVisor('0')">0</button>
+            <button onclick="adicionarAoVisor('.')">.</button>
+        </div>
+    </div>
+
+    <div class="historico">
+        <h2>Histórico de Cálculos</h2>
+        <ul id="lista-historico">
+            </ul>
+        <button onclick="limparHistorico()">Limpar Histórico</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
